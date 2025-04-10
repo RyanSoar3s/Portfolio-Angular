@@ -14,12 +14,12 @@ export class ResponsiveService {
   private readonly XLARGE = '(min-width: 1200px)';
 
   constructor(
-    private responsive$: BreakpointObserver
+    private breakpoints$: BreakpointObserver
 
   ) { }
 
   onBreakpointChange(): Observable<BreakpointState> {
-    return this.responsive$.observe([
+    return this.breakpoints$.observe([
       this.XSMALL,
       this.SMALL,
       this.MEDIUM,
