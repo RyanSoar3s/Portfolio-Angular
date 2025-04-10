@@ -56,11 +56,11 @@ export class NavigationComponent implements OnInit, OnDestroy {
 
   private sub!: Subscription;
 
-  protected hidden_menu: boolean = true;
-  protected isSmallScreen: boolean = false;
-  protected isZoomImage: boolean = false;
-
   protected readonly path: string = "assets/foto-navegacao.webp";
+
+  hidden_menu: boolean = true;
+  isZoomImage: boolean = false;
+  isSmallScreen: boolean = false;
 
   constructor(
     private responsive$: ResponsiveService,
