@@ -1,27 +1,115 @@
+::-webkit-scrollbar {
+  width: 0px;
+
+}
+
+.overlay {
+  background-color: #00000080;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+  z-index: 997;
+
+}
+
+.container-zoom-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100svh;
+  width: 100svw;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  z-index: 999;
+
+  .zoom-img {
+    height: 40%;
+    border-radius: 50%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+
+    }
+
+  }
+
+}
+
 .container-navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #131515;
   height: 100vh;
-  width: 25%;
+  width: var(--width-container-navigation);
   padding-top: 50px;
-  gap: 80px;
+  gap: 60px;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 998;
 
 }
 
-.container-logo {
+.hidden-menu {
+  transform: translateX(-100%);
+
+}
+
+.container-menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  margin: 15px 0px 0px 15px;
+
+  &:hover {
+    background-color: #0000002e;;
+
+  }
+
+}
+
+.menu-icon {
+  position: absolute;
+  font-size: 2.5em;
+  cursor: pointer;
+
+}
+
+.container-img {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 200px;
   cursor: pointer;
 
-  .logo {
-    background-color: gray;
+  .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     height: 180px;
     width: 180px;
+    border: 3px solid white;
     border-radius: 50%;
+
+    img {
+      position: absolute;
+      height: 95%;
+      width: 95%;
+      border-radius: 50%;
+
+    }
 
   }
 
@@ -30,6 +118,7 @@
 .title {
   color: white;
   margin-top: 20px;
+  font-size: var(--font-size-h1-navigation);
 
 }
 
@@ -38,6 +127,7 @@
   justify-content: center;
   height: 330px;
   width: 95%;
+  margin-bottom: 150px;
 
 }
 
@@ -45,6 +135,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  gap: 20px;
   width: 80%;
   list-style: none;
 
@@ -64,7 +155,6 @@ ul {
     }
 
   }
-
 
 }
 
