@@ -37,8 +37,9 @@ import { CommonModule } from '@angular/common';
 })
 export class NavigationComponent implements OnInit, OnDestroy {
   @ViewChild("menu") menu!: ElementRef;
-  @HostBinding("style.--width-container-navigation") width_container_navigation!: string;
   @HostBinding("style.--font-size-h1-navigation") font_size_h1!: string;
+
+  private width_container_navigation!: string;
 
   protected faHouse = faHouse;
   protected faUser = faUser;
@@ -105,6 +106,8 @@ export class NavigationComponent implements OnInit, OnDestroy {
         this.font_size_h1 = "1.3em";
 
       }
+
+      document.documentElement.style.setProperty("--width-container-navigation", this.width_container_navigation);
 
     });
 
