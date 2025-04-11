@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { HomeComponent } from './components/home/home.component';
 @Component({
   selector: 'app-root',
   imports: [
-    NavigationComponent
+    NavigationComponent,
+    HomeComponent
 
   ],
   templateUrl: './app.component.html',
