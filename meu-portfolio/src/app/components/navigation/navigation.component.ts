@@ -88,7 +88,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
       else if (state.breakpoints[this.MEDIUM]) {
         this.hidden_menu = false;
         this.isSmallScreen = false;
-        this.width_container_navigation = "300px";
+        this.width_container_navigation = "280px";
         this.font_size_h1 = "1.0em";
 
       }
