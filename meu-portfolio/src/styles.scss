@@ -4,6 +4,22 @@
   --width-container-navigation: 450px;
   --font-size-h1-navigation: 1.3em;
 
+  --font-size-home-content-home: 22px;
+
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+  min-height: 50px;
+  min-width: 40px;
+
 }
 
 
@@ -23,6 +39,7 @@ html, body {
 }
 
 body {
+  background: #0d0e0eed;
   font-family: "Rubik", sans-serif;
 
 }
