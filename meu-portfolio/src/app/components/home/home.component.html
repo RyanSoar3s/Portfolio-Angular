@@ -1,9 +1,19 @@
 <div class="container-home">
-  <div class="home">
+  <div class="home" [ngStyle]="{ 'width': (!isSmallScreen) ? 'calc(100vw - var(--width-container-navigation))' : '100vw' }">
     <div class="home-content">
-      <h1>Olá, mundo!</h1>
-      <h1>Sou <span style="color: green;">Ryan Soares</span> <span> <&#47;></span></h1>
-      <h2>Desenvolvedor <span style="color: mediumblue;">FullStack</span> Junior</h2>
+      <h2 [ngStyle]="{ 'font-size': '2em' }">Olá, mundo!</h2>
+      <h1 [ngStyle]="{ 'font-size': '2.2em' }">Sou <span [ngStyle]="{
+        'background-image': 'linear-gradient(to right, #fe5038 10%, #db280f 30%, #d20d3b 70%, #980a52 100%)',
+        'background-clip': 'text',
+        'color': 'transparent'
+
+        }">Ryan Soares</span> <span> <&#47;></span></h1>
+      <h2 [ngStyle]="{ 'font-size': '1.7em' }">Desenvolvedor <span [ngStyle]="{
+        'background-image': 'linear-gradient(to left, #503caf 20%, #614dc1, 50%, #639de7 70%, #70f0fd 100%)',
+        'background-clip': 'text',
+        'color': 'transparent'
+
+        }">FullStack</span> Junior</h2>
 
     </div>
 
