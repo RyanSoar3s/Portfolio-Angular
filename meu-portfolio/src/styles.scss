@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-  --width-container-navigation: 450px;
-  --font-size-h1-navigation: 1.3em;
+  --option-display-header: inline;
+  --height-width-container-image-header: 200px;
+  --display-navigation-option-header: flex;
 
   --font-size-home-content-home: 22px;
 
@@ -39,7 +40,7 @@ html, body {
 }
 
 body {
-  background: #0d0e0eed;
+  background: #131417;
   font-family: "Rubik", sans-serif;
 
 }
