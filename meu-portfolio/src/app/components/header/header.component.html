@@ -1,0 +1,57 @@
+<div [ngClass]="'container-header'">
+  <div [ngClass]="'header'" [ngStyle]="{ 'justify-content': (isSmallScreen && isOpenMenu) ? 'center' : 'space-between' }">
+    <nav [ngStyle]="{ 'width': (!isSmallScreen) ? '70%' : '90%' }">
+      <div ngClass="menu" [ngStyle]="{ 'display': (isSmallScreen) ? 'flex' : 'none' }" (click)="toggleMenu()">
+          <fa-icon [icon]="faBars"></fa-icon>
+
+        </div>
+      <div [ngClass]="'navigation-option'">
+        <div>
+          <fa-icon [icon]="faHouse"></fa-icon> <span ngClass="option"> Início</span>
+        </div> <span ngClass="line"></span>
+
+      </div>
+
+      <div [ngClass]="'navigation-option'">
+        <div>
+          <fa-icon [icon]="faUser"></fa-icon> <span ngClass="option"> Sobre mim</span>
+        </div> <span ngClass="line"></span>
+
+      </div>
+
+      <div [ngClass]="'navigation-option'">
+        <div>
+          <fa-icon [icon]="faSitemap"> </fa-icon> <span ngClass="option"> Projetos</span>
+
+        </div> <span ngClass="line"></span>
+
+      </div>
+
+      <div [ngClass]="'navigation-option'">
+        <div>
+          <fa-icon [icon]="faPhone"></fa-icon> <span ngClass="option"> Contatos</span>
+
+        </div> <span ngClass="line"></span>
+
+      </div>
+      <div [ngClass]="'navigation-option'">
+        <div>
+          <fa-icon [icon]="faCircleInfo"></fa-icon> <span ngClass="option"> Sobre o Projeto</span>
+
+        </div> <span ngClass="line"></span>
+
+      </div>
+
+    </nav>
+
+    <div [ngClass]="'container-image'" [ngStyle]="{ 'display': (isSmallScreen && isOpenMenu) ? 'none' : 'flex' }">
+      <div [ngClass]="'image'">
+        <img [src]="path" [alt]="'foto de navegação'">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
