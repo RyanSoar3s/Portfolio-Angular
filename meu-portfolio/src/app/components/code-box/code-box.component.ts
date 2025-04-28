@@ -7,7 +7,8 @@ import {
   OnInit,
   AfterViewInit,
   OnDestroy,
-  ViewEncapsulation
+  ViewEncapsulation,
+  HostBinding
 
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -16,6 +17,8 @@ import { CodeSnippetService } from '../../services/code-snippet.service';
 import { CodeSnippet } from '../../types/code-snippet';
 
 import { TypingAnimationsService } from '../../services/typing-animations.service';
+import { Subscription } from 'rxjs';
+import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
   selector: 'app-code-box',
@@ -30,9 +33,15 @@ import { TypingAnimationsService } from '../../services/typing-animations.servic
 
 })
 export class CodeBoxComponent implements OnInit, AfterViewInit, OnDestroy {
+  @HostBinding("style.--flex-direction-container-code-box-code-box") flex_direction_container_code_box_code_box!: string;
   @ViewChild("htmlCode") htmlCodeParent!: ElementRef;
   @ViewChild("scssCode") scssCodeParent!: ElementRef;
   @ViewChild("tsCode") tsCodeParent!: ElementRef;
+
+  private readonly XSMALL = '(max-width: 599px)';
+  private readonly SMALL = '(min-width: 600px) and (max-width: 749px)';
+  private readonly MEDIUM = '(min-width: 750px) and (max-width: 969px)';
+  private readonly LARGE = '(min-width: 970px) and (max-width: 1199px)';
 
   private html_content: Array<HTMLElement> = [];
   private scss_content: Array<HTMLElement> = [];
@@ -40,17 +49,28 @@ export class CodeBoxComponent implements OnInit, AfterViewInit, OnDestroy {
   protected readonly path: string = "assets/imgs/down.png";
 
   private code_snippet!: Array<CodeSnippet>;
+  private sub!: Subscription;
 
   out = output<number>();
 
   constructor(
     private renderer: Renderer2,
     private code_snippet_service: CodeSnippetService,
-    private typing_animations_service: TypingAnimationsService
+    private typing_animations_service: TypingAnimationsService,
+    private responsive$: ResponsiveService
 
   ) {}
 
   ngOnInit(): void {
+    this.sub = this.responsive$.onBreakpointChange().subscribe((state) => {
+      if (state.breakpoints[this.XSMALL]) this.flex_direction_container_code_box_code_box = "column";
+      else if (state.breakpoints[this.SMALL]) this.flex_direction_container_code_box_code_box = "column";
+      else if (state.breakpoints[this.MEDIUM]) this.flex_direction_container_code_box_code_box = "column";
+      else if (state.breakpoints[this.LARGE]) this.flex_direction_container_code_box_code_box = "column";
+      else this.flex_direction_container_code_box_code_box = "row";
+
+    });
+
 
 
   }
@@ -161,6 +181,7 @@ export class CodeBoxComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    if (this.sub) this.sub.unsubscribe();
 
   }
 
