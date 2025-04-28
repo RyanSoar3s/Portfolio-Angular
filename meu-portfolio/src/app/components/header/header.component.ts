@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, AfterViewInit, OnDestroy, HostBinding } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  HostBinding
+
+} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import {
@@ -24,7 +30,7 @@ import { ResponsiveService } from '../../services/responsive.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements AfterViewInit, OnDestroy {
+export class HeaderComponent implements OnInit, OnDestroy {
   @HostBinding("style.--option-display-header") option_display_header!: string;
   @HostBinding("style.--height-width-container-image-header") height_width_container_image_header!: string;
   @HostBinding("style.--display-navigation-option-header") display_navigation_option_header!: string;
@@ -43,7 +49,7 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
   protected faPhone = faPhone;
   protected faCircleInfo = faCircleInfo;
 
-  protected readonly path: string = "assets/foto-navegacao.webp";
+  protected readonly path: string = "assets/imgs/foto-navegacao.webp";
 
   protected isSmallScreen: boolean = false;
   protected isOpenMenu: boolean = false;
@@ -53,7 +59,7 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
 
   ) { }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     this.sub = this.responsive$.onBreakpointChange().subscribe((state) => {
       if (state.breakpoints[this.XSMALL]) {
         this.option_display_header = "none";
@@ -97,6 +103,7 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
       }
 
     });
+
 
   }
 
