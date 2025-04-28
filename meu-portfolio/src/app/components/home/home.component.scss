@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-end;
   position: relative;
-  height: 100svh;
+  height: 800px;
   width: 100svw;
   z-index: 1;
 
@@ -10,10 +10,11 @@
 
 .home {
   position: relative;
-  display: inherit;
+  display: flex;
   align-items: center;
   justify-content: center;
   height: inherit;
+  width: inherit;
   z-index: 100;
 
   .home-content {
@@ -22,11 +23,50 @@
     gap: 20px;
     font-size: var(--font-size-home-content-home);
 
+    h2:nth-child(1) {
+      font-size: 2em;
+
+    }
+
+    h1 {
+      font-size: 2.2em;
+
+      span {
+        background-image: linear-gradient(to right, #fe5038 10%, #db280f 30%, #d20d3b 70%, #980a52 100%);
+
+      }
+
+    }
+
+    h2:nth-child(3) {
+      font-size: 1.7em;
+
+      span {
+        background-image: linear-gradient(to left, #503caf 20%, #614dc1, 50%, #639de7 70%, #70f0fd 100%);
+
+      }
+
+    }
+
   }
 
 }
 
 h1, h2 {
+  opacity: 0;
   color: white;
+  transition: opacity 1s ease;
+  will-change: opacity;
+
+}
+
+.title {
+  opacity: 1;
+
+}
+
+h1 span, h1 + h2 span {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 
 }
