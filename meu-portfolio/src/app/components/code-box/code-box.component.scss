@@ -12,10 +12,12 @@ $parameter-color: #de7300;
 .container-code-box {
   color: white;
   display: flex;
+  flex-direction: var(--flex-direction-container-code-box-code-box);
   justify-content: space-evenly;
   position: absolute;
   height: 800px;
   width: 100vw;
+  padding: 0px 40px;
 
 }
 
