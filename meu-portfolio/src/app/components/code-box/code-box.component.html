@@ -1,0 +1,64 @@
+<div [ngClass]="'container-code-box'">
+  <div [ngClass]="'code-box html'">
+    <div [ngClass]="'code-box-header'">
+      <h3>HTML</h3>
+
+      <div [ngClass]="'arrow-down'">
+        <img [src]="path" [alt]="'arrow down'">
+
+      </div>
+
+    </div>
+
+    <div ngClass="code">
+      <pre>
+        <code #htmlCode></code>
+
+      </pre>
+
+    </div>
+
+  </div>
+
+  <div [ngClass]="'code-box ts'">
+    <div [ngClass]="'code-box-header'">
+      <h3>TS</h3>
+
+      <div [ngClass]="'arrow-down'">
+        <img [src]="path" [alt]="'arrow down'">
+
+      </div>
+
+    </div>
+
+    <div ngClass="code">
+      <pre>
+        <code #tsCode></code>
+
+      </pre>
+
+    </div>
+
+  </div>
+
+  <div [ngClass]="'code-box scss'">
+    <div [ngClass]="'code-box-header'">
+      <h3>SCSS</h3>
+      <div [ngClass]="'arrow-down'">
+        <img [src]="path" [alt]="'arrow down'">
+
+      </div>
+
+    </div>
+
+    <div class="code">
+      <pre>
+        <code #scssCode></code>
+
+      </pre>
+
+    </div>
+
+  </div>
+
+</div>
