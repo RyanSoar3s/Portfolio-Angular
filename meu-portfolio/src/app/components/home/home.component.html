@@ -1,19 +1,11 @@
-<div class="container-home">
-  <div class="home" [ngStyle]="{ 'width': (!isSmallScreen) ? 'calc(100vw - var(--width-container-navigation))' : '100vw' }">
-    <div class="home-content">
-      <h2 [ngStyle]="{ 'font-size': '2em' }">Olá, mundo!</h2>
-      <h1 [ngStyle]="{ 'font-size': '2.2em' }">Sou <span [ngStyle]="{
-        'background-image': 'linear-gradient(to right, #fe5038 10%, #db280f 30%, #d20d3b 70%, #980a52 100%)',
-        'background-clip': 'text',
-        'color': 'transparent'
+<app-code-box (out)="showText($event)"></app-code-box>
 
-        }">Ryan Soares</span> <span> <&#47;></span></h1>
-      <h2 [ngStyle]="{ 'font-size': '1.7em' }">Desenvolvedor <span [ngStyle]="{
-        'background-image': 'linear-gradient(to left, #503caf 20%, #614dc1, 50%, #639de7 70%, #70f0fd 100%)',
-        'background-clip': 'text',
-        'color': 'transparent'
-
-        }">FullStack</span> Junior</h2>
+<div ngClass="container-home">
+  <div ngClass="home">
+    <div ngClass="home-content" #homeContent>
+      <h2 data-1>Olá, mundo!</h2>
+      <h1 data-2>Sou <span>Ryan Soares</span> &lt;/&gt;</h1>
+      <h2 data-3>Desenvolvedor <span>FullStack</span> Junior</h2>
 
     </div>
 
