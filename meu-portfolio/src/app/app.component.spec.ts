@@ -1,11 +1,26 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [ AppComponent ],
+      providers: [ provideAnimations() ]
     }).compileComponents();
+  });
+
+  beforeAll(() => {
+    Element.prototype.animate = jest.fn().mockImplementation(() => ({
+      finished: Promise.resolve(),
+      cancel: jest.fn(),
+      play: jest.fn(),
+      pause: jest.fn(),
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn()
+
+    }));
+
   });
 
   it('should create the app', () => {
@@ -24,6 +39,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Ryan Soares');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Sou Ryan Soares </>');
   });
 });
