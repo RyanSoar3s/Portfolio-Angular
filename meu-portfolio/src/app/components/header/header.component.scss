@@ -1,6 +1,7 @@
-.container-header {
+:host {
   background-color: black;
   position: relative;
+  display: block;
   color: white;
   font-weight: 600;
   height: 150px;
