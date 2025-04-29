@@ -81,7 +81,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   showText(id: number): void {
-    const title = this.home_content.nativeElement.querySelector(`[data-${id}]`);
+    const title = this.home_content.nativeElement.querySelector(`[title-${id}]`);
     this.renderer.addClass(title, "title");
 
   }
