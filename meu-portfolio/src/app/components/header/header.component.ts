@@ -17,8 +17,8 @@ import {
   faCircleInfo
 
 } from '@fortawesome/free-solid-svg-icons';
+import { ResponsiveService } from '@services/responsive.service';
 import { Subscription } from 'rxjs';
-import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
   selector: 'app-header',
