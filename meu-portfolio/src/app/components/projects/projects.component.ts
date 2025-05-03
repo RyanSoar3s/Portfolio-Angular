@@ -34,8 +34,6 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
   private projects = viewChildren<string, ElementRef<HTMLElement>>("projects", { read: ElementRef<HTMLElement> })
 
-  protected readonly path: string = "assets/imgs/portfolio-img.png";
-
   private readonly XSMALL = '(max-width: 599px)';
   private readonly SMALL = '(min-width: 600px) and (max-width: 749px)';
   private readonly MEDIUM = '(min-width: 750px) and (max-width: 969px)';
