@@ -2,6 +2,7 @@ import {
   Component,
   ElementRef,
   HostBinding,
+  viewChildren,
   OnInit,
   OnDestroy,
   Renderer2
@@ -30,6 +31,8 @@ import { ProjectInfo } from '@data/types/project-info';
 export class ProjectsComponent implements OnInit, OnDestroy {
   @HostBinding("style.--height-host-projects") height_host_projects!: string;
   @HostBinding("style.--height-flex-projects-projects") height_flex_projects_projects!: string;
+
+  private projects = viewChildren<string, ElementRef<HTMLElement>>("projects", { read: ElementRef<HTMLElement> })
 
   protected readonly path: string = "assets/imgs/portfolio-img.png";
 
@@ -84,7 +87,6 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
   constructor(
     private renderer: Renderer2,
-    private el: ElementRef,
     private responsive$: ResponsiveService
 
   ) {}
@@ -124,13 +126,14 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
   showOptions(index: number): void {
     this.show_options = !this.show_options;
-    const project: HTMLElement = (this.el.nativeElement as HTMLElement).querySelectorAll(".project")[index] as HTMLElement;
+    const project = this.projects()[index].nativeElement;
     this.renderer.addClass(project, "project-options_active");
 
   }
 
-  hiddeOptions(index: number): void {    this.show_options = !this.show_options;
-    const project: HTMLElement = (this.el.nativeElement as HTMLElement).querySelectorAll(".project")[index] as HTMLElement;
+  hiddeOptions(index: number): void {
+    this.show_options = !this.show_options;
+    const project = this.projects()[index].nativeElement;
     this.renderer.removeClass(project, "project-options_active");
 
   }
