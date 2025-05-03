@@ -3,7 +3,7 @@ import {
   CursorOptions,
   TypingOptions
 
-} from '../types/animation-options';
+} from '@data/types/animation-options';
 
 @Injectable({
   providedIn: 'root'

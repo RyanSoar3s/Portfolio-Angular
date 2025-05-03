@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CodeSnippet } from '../types/code-snippet';
+import { CodeSnippet } from '@data/types/code-snippet';
 
 @Injectable({
   providedIn: 'root'
