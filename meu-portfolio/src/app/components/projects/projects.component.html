@@ -1,0 +1,30 @@
+<h1>Meus Projetos</h1>
+
+<div ngClass="flex-projects">
+  @for (info of project_info; track info) {
+    <div ngClass="project" (mouseenter)="showOptions(info.id)" (mouseleave)="hiddeOptions(info.id)">
+      <div ngClass="img">
+        <img [src]="info.path" [alt]="info.altText">
+
+      </div>
+
+      <h2>{{ info.title }}</h2>
+
+      <div [ngClass]="'options'">
+        <button [disabled]="info.isDisabledButtonProject">
+          <a [href]="info.linkProject"></a><span><fa-icon [icon]="faEye"></fa-icon> Vizualizar</span>
+
+        </button>
+        
+        <button [disabled]="info.isDisabledButtonRepo">
+          <a [href]="info.linkRepo"></a><span><fa-icon [icon]="faGithub"></fa-icon> GitHub</span>
+
+        </button>
+
+      </div>
+
+    </div>
+
+    }
+
+</div>
