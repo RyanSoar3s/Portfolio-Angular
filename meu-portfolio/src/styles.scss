@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-  //property-tag/class/id-component
+  //property-(tag/class/id)-component
 
   --option-display-header: inline;
   --height-width-container-image-header: 200px;
@@ -12,6 +12,9 @@
 
   --width-card-about-me: 40%;
   --left-right-card-about-me: 80px;
+
+  --height-host-projects: 800px;
+  --height-flex-projects-projects: 430px;
 
 }
 
