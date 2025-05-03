@@ -2,7 +2,7 @@ import {
   Component,
   output,
   Renderer2,
-  ViewChild,
+  viewChild,
   ElementRef,
   OnInit,
   AfterViewInit,
@@ -12,13 +12,13 @@ import {
 
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CodeSnippetService } from '../../services/code-snippet.service';
-
-import { CodeSnippet } from '../../types/code-snippet';
-
-import { TypingAnimationsService } from '../../services/typing-animations.service';
 import { Subscription } from 'rxjs';
-import { ResponsiveService } from '../../services/responsive.service';
+
+import { CodeSnippet } from '@data/types/code-snippet';
+
+import { CodeSnippetService } from '@services/code-snippet.service';
+import { ResponsiveService } from '@services/responsive.service';
+import { TypingAnimationsService } from '@services/typing-animations.service';
 
 @Component({
   selector: 'app-code-box',
@@ -34,9 +34,10 @@ import { ResponsiveService } from '../../services/responsive.service';
 })
 export class CodeBoxComponent implements OnInit, AfterViewInit, OnDestroy {
   @HostBinding("style.--flex-direction-container-code-box-code-box") flex_direction_container_code_box_code_box!: string;
-  @ViewChild("htmlCode") htmlCodeParent!: ElementRef;
-  @ViewChild("scssCode") scssCodeParent!: ElementRef;
-  @ViewChild("tsCode") tsCodeParent!: ElementRef;
+
+  private htmlCodeParent = viewChild<ElementRef>("htmlCode");
+  private scssCodeParent = viewChild<ElementRef>("scssCode");
+  private tsCodeParent = viewChild<ElementRef>("tsCode");
 
   private readonly XSMALL = '(max-width: 599px)';
   private readonly SMALL = '(min-width: 600px) and (max-width: 749px)';
@@ -82,19 +83,17 @@ export class CodeBoxComponent implements OnInit, AfterViewInit, OnDestroy {
     let isClear: boolean = true;
 
     this.code_snippet.forEach((snippet, index) => {
-      this.typingSnippetsAnimation(this.htmlCodeParent.nativeElement, this.html_content, snippet.html, 0, delay, delay);
-      this.typingSnippetsAnimation(this.scssCodeParent.nativeElement, this.scss_content, snippet.scss, 0, delay, delay);
-      this.typingSnippetsAnimation(this.tsCodeParent.nativeElement, [], snippet.ts, 0, delay, delay);
-
-
+      this.typingSnippetsAnimation(this.htmlCodeParent()?.nativeElement, this.html_content, snippet.html, 0, delay, delay);
+      this.typingSnippetsAnimation(this.scssCodeParent()?.nativeElement, this.scss_content, snippet.scss, 0, delay, delay);
+      this.typingSnippetsAnimation(this.tsCodeParent()?.nativeElement, [], snippet.ts, 0, delay, delay);
 
       isClear = (index >= this.code_snippet.length - 1) ? false : true;
 
       delay += 2 * (index + 2);
 
       if (isClear) {
-        this.clearSnippetsAnimations(this.htmlCodeParent.nativeElement, this.html_content, snippet.html.length - 1, 0, delay, delay);
-        this.clearSnippetsAnimations(this.scssCodeParent.nativeElement, this.scss_content, snippet.scss.length - 1, 0, delay, delay);
+        this.clearSnippetsAnimations(this.htmlCodeParent()?.nativeElement, this.html_content, snippet.html.length - 1, 0, delay, delay);
+        this.clearSnippetsAnimations(this.scssCodeParent()?.nativeElement, this.scss_content, snippet.scss.length - 1, 0, delay, delay);
 
       }
 
@@ -184,6 +183,5 @@ export class CodeBoxComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.sub) this.sub.unsubscribe();
 
   }
-
 
 }

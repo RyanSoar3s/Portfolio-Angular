@@ -4,14 +4,14 @@ import {
   OnInit,
   OnDestroy,
   HostBinding,
-  ViewChild,
+  viewChild,
   ElementRef,
   Renderer2
 
 } from '@angular/core';
+import { CodeBoxComponent } from '@components/code-box/code-box.component';
+import { ResponsiveService } from '@services/responsive.service';
 import { Subscription } from 'rxjs';
-import { ResponsiveService } from '../../services/responsive.service';
-import { CodeBoxComponent } from '../code-box/code-box.component';
 
 @Component({
   selector: 'app-home',
@@ -26,7 +26,8 @@ import { CodeBoxComponent } from '../code-box/code-box.component';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   @HostBinding("style.--font-size-home-content-home") font_size_home_content_home!: string;
-  @ViewChild("homeContent") home_content!: ElementRef
+
+  private home_content = viewChild<ElementRef>("homeContent")
 
   private readonly XSMALL = '(max-width: 599px)';
   private readonly SMALL = '(min-width: 600px) and (max-width: 749px)';
@@ -56,7 +57,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
       else if (state.breakpoints[this.SMALL]) {
         this.isSmallScreen = true;
-
         this.font_size_home_content_home = "18px";
 
       }
@@ -81,7 +81,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   showText(id: number): void {
-    const title = this.home_content.nativeElement.querySelector(`[title-${id}]`);
+    const title = this.home_content()?.nativeElement.querySelector(`[title-${id}]`);
     this.renderer.addClass(title, "title");
 
   }
