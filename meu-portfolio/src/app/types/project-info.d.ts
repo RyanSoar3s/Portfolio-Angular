@@ -3,6 +3,7 @@ export type ProjectInfo = {
   path: string;
   altText: string;
   title: string;
+  languages: string;
   isDisabledButtonProject: boolean;
   isDisabledButtonRepo: boolean;
   linkProject: string;
