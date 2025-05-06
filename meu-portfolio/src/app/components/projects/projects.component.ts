@@ -15,7 +15,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { Subscription } from 'rxjs';
 import { ResponsiveService } from '@services/responsive.service';
-import { ProjectInfo } from '@data/types/project-info';
+import { ProjectInfo } from '@models/project-info.model';
 
 @Component({
   selector: 'app-projects',

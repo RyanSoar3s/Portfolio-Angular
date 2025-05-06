@@ -14,11 +14,11 @@ import {
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 
-import { CodeSnippet } from '@data/types/code-snippet';
 
 import { CodeSnippetService } from '@services/code-snippet.service';
 import { ResponsiveService } from '@services/responsive.service';
 import { TypingAnimationsService } from '@services/typing-animations.service';
+import { CodeSnippet } from '@models/code-snippet.model';
 
 @Component({
   selector: 'app-code-box',
