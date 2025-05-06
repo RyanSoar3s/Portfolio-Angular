@@ -1,0 +1,86 @@
+$bg-color-container-contacts: #1E1F26;
+$bg-color-contact: #2b2c35;
+$color-box-shadow: #00000052;
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--height-host-contacts);
+  width: 100vw;
+  overflow: hidden;
+
+  .container-contacts {
+    background-color: $bg-color-container-contacts;
+    height: auto;
+    width: 80%;
+    border-radius: 20px;
+    padding-top: 50px;
+    box-shadow: 2px 2px 7px 1px $color-box-shadow;
+
+  }
+
+}
+
+.title {
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.5em;
+  margin-bottom: 60px;
+
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-self: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  height: 85%;
+  width: 100%;
+  padding: 0px 20px;
+  margin-bottom: 50px;
+  list-style: none;
+
+  .contact {
+    background-color: $bg-color-contact;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 230px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 7px 1px $color-box-shadow;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      background: black;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+
+      fa-icon {
+        font-size: 3em;
+
+      }
+
+    }
+
+    h3, a {
+      color: white;
+
+    }
+
+  }
+
+}
+
+
