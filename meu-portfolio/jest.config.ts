@@ -15,7 +15,7 @@ const config: Config = {
   moduleNameMapper: {
     "@components/(.*)": "<rootDir>/src/app/components/$1",
     "@services/(.*)": "<rootDir>/src/app/services/$1",
-    "@data/types/(.*)": "<rootDir>/src/app/types/$1"
+    "@models/(.*)": "<rootDir>/src/app/models/$1"
 
   },
 
