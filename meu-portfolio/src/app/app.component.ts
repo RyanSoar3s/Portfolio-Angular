@@ -4,6 +4,7 @@ import { HomeComponent } from '@components/home/home.component';
 import { AboutMeComponent } from '@components/about-me/about-me.component';
 import { ProjectsComponent } from '@components/projects/projects.component';
 import { ContactsComponent } from '@components/contacts/contacts.component';
+import { AboutThisProjectComponent } from '@components/about-this-project/about-this-project.component';
 @Component({
   selector: 'app-root',
   imports: [
@@ -11,7 +12,8 @@ import { ContactsComponent } from '@components/contacts/contacts.component';
     HomeComponent,
     AboutMeComponent,
     ProjectsComponent,
-    ContactsComponent
+    ContactsComponent,
+    AboutThisProjectComponent
 
   ],
   templateUrl: './app.component.html',
