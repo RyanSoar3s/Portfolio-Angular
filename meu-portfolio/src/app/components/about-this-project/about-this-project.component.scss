@@ -1,0 +1,96 @@
+$bg-color-languages__language: #2C303A;
+$box-shadow-languages__language: 1px 1px 7px 1px #00000073;
+$color-border-languages__language: #ffffff83;
+
+$linear-gradient-title-html: to right, #E44D26 20%, #e56532 40%, #e77149 60%, #f8a48f 80%, #ffc8ba 100%;
+$linear-gradient-title-sass: to right, #CB6699 20%, #D683A9 40%, #E0A1BA 60%, #dbabb8 80%, #f1cbd0 100%;
+$linear-gradient-title-ts: to right, #007ACC 20%, #338FD6 40%, #66A3E0 60%, #99B8EB 80%, #CCECF5 100%;
+$linear-gradient-title-angular: to right, #C3002F 20%, #bb1635 40%, #c93748 60%, #f58987 80%, #fcaeae 100%;
+
+:host {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: var(--height-host-about-this-project);
+  width: 100vw;
+  overflow: hidden;
+
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+
+}
+
+.host__h2 {
+  font-size: 2em;
+
+}
+
+.languages {
+  display: grid;
+  grid-template-columns: var(--grid-template-columns-ul-about-this-project);
+  align-items: center;
+  justify-items: center;
+  height: var(--height-ul-about-this-project);
+  width: 80%;
+  list-style: none;
+
+  .languages__language {
+    background-color: $bg-color-languages__language;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 340px;
+    width: 220px;
+    border-radius: 20px;
+    box-shadow: $box-shadow-languages__language;
+    cursor: pointer;
+    transition: transform .5s ease;
+
+    &:hover {
+      border: 2px solid $color-border-languages__language;
+      transform: scale(1.15);
+
+    }
+
+    .languages__icon {
+      height: 120px;
+      width: 120px;
+
+    }
+
+    .title {
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+
+    }
+
+  }
+
+}
+
+.languages__title--html {
+  background: linear-gradient($linear-gradient-title-html);
+
+}
+
+.languages__title--sass {
+  background: linear-gradient($linear-gradient-title-sass);
+
+}
+
+.languages__title--ts {
+  background: linear-gradient($linear-gradient-title-ts);
+
+}
+
+.languages__title--angular {
+  background: linear-gradient($linear-gradient-title-angular);
+
+}
