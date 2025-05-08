@@ -36,7 +36,6 @@ $linear-gradient-made-by__name: to right, #fe5038 10%, #db280f 30%, #d20d3b 70%,
 }
 
 .contacts {
-
   .contacts__container-title {
     margin-bottom: 15px;
 
@@ -71,6 +70,14 @@ $linear-gradient-made-by__name: to right, #fe5038 10%, #db280f 30%, #d20d3b 70%,
       font-size: 1.3em;
 
     }
+
+  }
+
+  .copyright__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65px;
 
   }
 
