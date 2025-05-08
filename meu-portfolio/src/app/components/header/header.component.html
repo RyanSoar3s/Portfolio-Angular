@@ -5,21 +5,21 @@
 
       </div>
     <div [ngClass]="'navigation-option'">
-      <div>
+      <div (click)="emit(0)">
         <fa-icon [icon]="faHouse"></fa-icon> <span ngClass="option"> Início</span>
       </div> <span ngClass="line"></span>
 
     </div>
 
     <div [ngClass]="'navigation-option'">
-      <div>
+      <div (click)="emit(1)">
         <fa-icon [icon]="faUser"></fa-icon> <span ngClass="option"> Sobre mim</span>
       </div> <span ngClass="line"></span>
 
     </div>
 
     <div [ngClass]="'navigation-option'">
-      <div>
+      <div (click)="emit(2)">
         <fa-icon [icon]="faSitemap"> </fa-icon> <span ngClass="option"> Projetos</span>
 
       </div> <span ngClass="line"></span>
@@ -27,14 +27,14 @@
     </div>
 
     <div [ngClass]="'navigation-option'">
-      <div>
+      <div (click)="emit(3)">
         <fa-icon [icon]="faPhone"></fa-icon> <span ngClass="option"> Contatos</span>
 
       </div> <span ngClass="line"></span>
 
     </div>
     <div [ngClass]="'navigation-option'">
-      <div>
+      <div (click)="emit(4)">
         <fa-icon [icon]="faCircleInfo"></fa-icon> <span ngClass="option"> Sobre o Projeto</span>
 
       </div> <span ngClass="line"></span>

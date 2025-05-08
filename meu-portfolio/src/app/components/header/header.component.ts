@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import {
   Component,
   OnInit,
+  output,
   OnDestroy,
   HostBinding
 
@@ -53,6 +54,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   protected isSmallScreen: boolean = false;
   protected isOpenMenu: boolean = false;
+
+  emit_id = output<number>();
 
   constructor(
     private responsive$: ResponsiveService
@@ -118,6 +121,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.display_navigation_option_header = "none";
 
     }
+
+  }
+
+  protected emit(id: number): void {
+    this.emit_id.emit(id);
 
   }
 
