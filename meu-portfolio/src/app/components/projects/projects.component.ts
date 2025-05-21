@@ -49,26 +49,26 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   protected readonly project_info: Array<ProjectInfo> = [
     {
       id: 0,
+      path: "assets/imgs/loja-online.png",
+      title: "Loja Online",
+      languages: "Tecnologias: HTML, Sass, TypeScript e Angular",
+      altText: "Projeto Loja Online",
+      isDisabledButtonProject: false,
+      isDisabledButtonRepo: false,
+      linkProject: "https://loja-online-peach.vercel.app/",
+      linkRepo: "https://github.com/RyanSoar3s/Loja-Online"
+
+    },
+    {
+      id: 1,
       path: "assets/imgs/portfolio-img.png",
       title: "Portfolio",
       languages: "Tecnologias: HTML, Sass, TypeScript e Angular",
       altText: "Projeto Portfolio",
       isDisabledButtonProject: false,
       isDisabledButtonRepo: false,
-      linkProject: "#",
-      linkRepo: "#"
-
-    },
-    {
-      id: 1,
-      path: "assets/imgs/mais-projetos-em-breve.png",
-      title: "Sem Projeto",
-      languages: "Tecnologias: Nenhuma",
-      altText: "Projeto Vazia",
-      isDisabledButtonProject: true,
-      isDisabledButtonRepo: true,
-      linkProject: "#",
-      linkRepo: "#"
+      linkProject: "https://ryansoares.com.br/",
+      linkRepo: "https://github.com/RyanSoar3s/Portfolio-Angular"
 
     },
     {
