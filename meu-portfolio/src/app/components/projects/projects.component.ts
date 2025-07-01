@@ -49,6 +49,18 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   protected readonly project_info: Array<ProjectInfo> = [
     {
       id: 0,
+      path: "assets/imgs/soletre-game.png",
+      title: "Soletre Game",
+      languages: "Tecnologias: HTML, Tailwindcss, Angular, Express, Vercel",
+      altText: "Projeto Soletre Game",
+      isDisabledButtonProject: false,
+      isDisabledButtonRepo: false,
+      linkProject: "https://soletre-game.vercel.app/",
+      linkRepo: "https://github.com/RyanSoar3s/soletre-game"
+
+    },
+    {
+      id: 1,
       path: "assets/imgs/loja-online.png",
       title: "Loja Online",
       languages: "Tecnologias: HTML, Sass, TypeScript e Angular",
@@ -60,7 +72,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
     },
     {
-      id: 1,
+      id: 2,
       path: "assets/imgs/portfolio-img.png",
       title: "Portfolio",
       languages: "Tecnologias: HTML, Sass, TypeScript e Angular",
@@ -69,18 +81,6 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       isDisabledButtonRepo: false,
       linkProject: "https://ryansoares.com.br/",
       linkRepo: "https://github.com/RyanSoar3s/Portfolio-Angular"
-
-    },
-    {
-      id: 2,
-      path: "assets/imgs/mais-projetos-em-breve.png",
-      title: "Sem Projeto",
-      languages: "Tecnologias: Nenhuma",
-      altText: "Projeto Vazio",
-      isDisabledButtonProject: true,
-      isDisabledButtonRepo: true,
-      linkProject: "#",
-      linkRepo: "#"
 
     }
 
