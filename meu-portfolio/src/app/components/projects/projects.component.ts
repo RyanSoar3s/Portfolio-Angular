@@ -51,7 +51,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       id: 0,
       path: "assets/imgs/soletre-game.png",
       title: "Soletre Game",
-      languages: "Tecnologias: HTML, Tailwindcss, Angular, Express, Vercel",
+      languages: "Tecnologias: HTML, Tailwindcss, Angular, Express, Vercel, Redis",
       altText: "Projeto Soletre Game",
       isDisabledButtonProject: false,
       isDisabledButtonRepo: false,
