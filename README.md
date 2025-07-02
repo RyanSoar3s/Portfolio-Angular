@@ -1,35 +1,50 @@
-<h1 align="center"><a href="https://ryansoares.com.br" target="_blank">Meu porftolio</a></h1>
+<h1 align="center"><a href="https://ryansoares.com.br" target="_blank">Meu porftolio Angular An</a></h1>
 
-### Ínicio:
-<p style="text-indent: 20px;">
-Área inicial com uma breve apresentação sobre mim e uma área para navegação entre as demais seções do site.
-</p>
+Este é um projeto de portfólio pessoal desenvolvido com **Angular 19**. O objetivo é apresentar minhas habilidades, experiências, projetos e formas de contato.
 
-### Sobre Mim:
-<p style="text-indent: 20px;">
-Nessa parte está um pouco da minha história e início na área de programação.
-</p>
+---
 
-### Habilidades:
-<p style="text-indent: 20px;">
-Aqui estão todas as tecnologias que domino atualmente.
-</p>
+## 🧩 Tecnologias Utilizadas
 
-### Projetos:
-<p style="text-indent: 20px;">
-Parte onde estão localizados todos os projetos que já trabalhei.
-</p>
+- [Angular 19](https://angular.io/)
+- TypeScript
+- HTML5 & SCSS
+- Angular Animations
+- Font Awesome (ícones)
+- Responsividade com CSS Flex/Grid
+- [Angular CLI](https://github.com/angular/angular-cli) versão 19.x.x
 
-### Contatos:
-<p style="text-indent: 20px;">
-Área com todos os meus contatos.
-</p>
+---
 
+## ⚙️ Como Executar o Projeto
 
-### Sobre Este Projeto:
-<p style="text-indent: 20px;">
-Nessa parte onde estão as tecnologias usadas no projeto.
-</p>
+```bash
+# Clone o repositório
+git clone https://github.com/RyanSoar3s/Portfolio-Angular.git
+
+# Acesse o diretório do projeto
+cd Portfolio-Angular
+
+# Instale as dependências
+npm install
+
+# Execute o servidor de desenvolvimento
+ng serve
+
+# Acesse o projeto no navegador
+http://localhost:4200/
+```
+
+---
+
+## 🧠 Funcionalidades
+
+- ✅ Página inicial com animações personalizadas
+- ✅ Seção "Sobre Mim"
+- ✅ Lista de projetos com imagens e links
+- ✅ Área com os contatos
+- ✅ Tecnologias do projeto com ícones
+- ✅ Layout responsivo (mobile, tablet e desktop)
 
 ---
 
