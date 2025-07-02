@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://ryansoares.com.br" target="_blank">Meu porftolio Angular</a></h1>
+<h1 align="center"><a href="https://ryansoares.com.br" target="_blank">Meu porftolio</a></h1>
 
 Este é um projeto de portfólio pessoal desenvolvido com **Angular 19**. O objetivo é apresentar minhas habilidades, experiências, projetos e formas de contato.
 
