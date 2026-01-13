@@ -1,18 +1,18 @@
 <h1 align="center"><a href="https://ryansoares.com.br" target="_blank">Meu porftolio</a></h1>
 
-Este é um projeto de portfólio pessoal desenvolvido com **Angular 19**. O objetivo é apresentar minhas habilidades, experiências, projetos e formas de contato.
+Este é um projeto de portfólio pessoal desenvolvido com **Angular 21**. O objetivo é apresentar minhas habilidades, experiências, projetos e formas de contato.
 
 ---
 
 ## 🧩 Tecnologias Utilizadas
 
-- [Angular 19](https://angular.io/)
+- [Angular 21](https://angular.io/)
 - TypeScript
 - HTML5 & SCSS
 - Angular Animations
 - Font Awesome (ícones)
 - Responsividade com CSS Flex/Grid
-- [Angular CLI](https://github.com/angular/angular-cli) versão 19.x.x
+- [Angular CLI](https://github.com/angular/angular-cli) versão 21.x.x
 
 ---
 
