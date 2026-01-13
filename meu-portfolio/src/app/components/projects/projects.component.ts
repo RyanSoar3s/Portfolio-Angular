@@ -49,6 +49,18 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   protected readonly project_info: Array<ProjectInfo> = [
     {
       id: 0,
+      path: "assets/imgs/video-streaming.png",
+      title: "Video Streaming",
+      languages: "Tecnologias: HTML, Tailwindcss, Angular, Express, Vercel, MongoDB",
+      altText: "Projeto Video Streaming",
+      isDisabledButtonProject: false,
+      isDisabledButtonRepo: false,
+      linkProject: "https://video-streaming-tawny-nine.vercel.app/",
+      linkRepo: "https://github.com/RyanSoar3s/video-streaming"
+
+    },
+    {
+      id: 1,
       path: "assets/imgs/soletre-game.png",
       title: "Soletre Game",
       languages: "Tecnologias: HTML, Tailwindcss, Angular, Express, Vercel, Redis",
@@ -60,7 +72,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
     },
     {
-      id: 1,
+      id: 2,
       path: "assets/imgs/loja-online.png",
       title: "Loja Online",
       languages: "Tecnologias: HTML, Sass, TypeScript e Angular",
@@ -69,18 +81,6 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       isDisabledButtonRepo: false,
       linkProject: "https://loja-online-peach.vercel.app/",
       linkRepo: "https://github.com/RyanSoar3s/Loja-Online"
-
-    },
-    {
-      id: 2,
-      path: "assets/imgs/portfolio-img.png",
-      title: "Portfolio",
-      languages: "Tecnologias: HTML, Sass, TypeScript e Angular",
-      altText: "Projeto Portfolio",
-      isDisabledButtonProject: false,
-      isDisabledButtonRepo: false,
-      linkProject: "https://ryansoares.com.br/",
-      linkRepo: "https://github.com/RyanSoar3s/Portfolio-Angular"
 
     }
 
